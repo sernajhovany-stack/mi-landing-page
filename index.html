@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TravelCompanion AR — Rutas urbanas con Realidad Aumentada</title>
+  <meta name="description" content="Landing page del MVP de TravelCompanion AR: rutas temáticas con narrativa AR, comercios aliados y beneficios. Captación de interesados para validación del ACA." />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root{
+      --bg: #0f172a; --card:#0b1220; --text:#e5e7eb; --muted:#9ca3af;
+      --primary:#22d3ee; --accent:#a78bfa; --line:#1f2937; --ok:#10b981; --warn:#f59e0b
+    }
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1220 0%,#0f172a 40%,#0b1220 100%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .container{max-width:1060px;margin:0 auto;padding:18px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .logo{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--primary),var(--accent))}
+    .actions a{padding:8px 12px;border-radius:10px;border:1px solid var(--line)}
+    .actions a.cta{background:linear-gradient(135deg,var(--primary),var(--accent));color:#0b1220;border:none;font-weight:800}
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:center;padding:24px 0}
+    @media (max-width:860px){.hero{grid-template-columns:1fr}}
+    h1{font-size:clamp(28px,4.8vw,48px);line-height:1.07;margin:.2rem 0 10px}
+    p{color:var(--muted)}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:#0b1220;color:var(--text);font-weight:700}
+    .btn.primary{background:linear-gradient(135deg,var(--primary),var(--accent));color:#0b1220;border:none}
+    .mock{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:radial-gradient(600px 200px at 100% 0%,rgba(34,211,238,.15),transparent 60%),radial-gradient(600px 200px at 0% 100%,rgba(167,139,250,.14),transparent 60%),#0b1220}
+    .bar{display:flex;gap:6px;padding:8px 10px;background:#0f172a;border-bottom:1px solid var(--line)}
+    .dot{width:10px;height:10px;border-radius:6px;background:#ef4444} .dot:nth-child(2){background:#f59e0b} .dot:nth-child(3){background:#10b981}
+    .screen{aspect-ratio:16/10;padding:12px}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:#0f172a;color:var(--muted);font-size:13px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:860px){.grid3{grid-template-columns:1fr}}
+    .card{border:1px solid var(--line);border-radius:16px;padding:16px;background:#0b1220}
+    .card h3{margin:4px 0 6px}
+    .badge{font-size:12px;color:#0b1220;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:999px;padding:4px 8px;font-weight:800}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin:22px 0 10px}
+    .stat{display:flex;gap:8px;align-items:center} .stat b{color:#fff}
+    .proof{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px}
+    .avatar{width:28px;height:28px;border-radius:50%;background:#1f2937;border:1px solid #374151}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:980px){.pricing{grid-template-columns:1fr}}
+    .faq details{border:1px solid var(--line);border-radius:12px;padding:12px;background:#0b1220}
+    .faq summary{cursor:pointer;font-weight:700}
+    form input,form textarea,form select{width:100%;margin:6px 0 10px;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f172a;color:var(--text)}
+    .small{font-size:13px;color:var(--muted)}
+    footer{border-top:1px solid var(--line);margin-top:22px;padding:18px 0;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav" aria-label="Principal">
+      <div class="brand"><span class="logo" aria-hidden="true"></span><span>TravelCompanion AR</span></div>
+      <div class="actions">
+        <a href="#beneficios">Beneficios</a>
+        <a href="#validacion">Validación</a>
+        <a class="cta" href="#registro">Probar ruta piloto con 20% OFF</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div>
+        <div class="chip"></div>
+        <h1>Vive la ciudad con historia en Realidad Aumentada</h1>
+        <p>Escanea fachadas o QR con tu móvil y descubre rutas temáticas, historias locales y beneficios en comercios aliados.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#registro">Probar ruta piloto con 20% OFF</a>
+          <a class="btn" href="#beneficios">Ver cómo funciona</a>
+        </div>
+        <div class="proof">
+          <img class="avatar" alt=""/><img class="avatar" alt=""/><img class="avatar" alt=""/>
+          <span class="small"></span>
+        </div>
+      </div>
+      <div class="mock" aria-hidden="true">
+        <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="screen">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Vista previa de la ruta con AR" style="border-radius:12px;border:1px solid var(--line)"/>
+        </div>
+      </div>
+    </header>
+
+    <section id="beneficios">
+      <div class="section-title"><h2>Beneficios clave</h2><span class="badge">Pensado para experiencias</span></div>
+      <div class="grid3">
+        <div class='card'><h3>Descubre joyas ocultas</h3><p>Encuentra lugares auténticos y curados, lejos de las trampas para turistas.</p></div><div class='card'><h3>Aprende mientras caminas</h3><p>Capas AR con narrativa, audio y fotos históricas, incluso con conectividad limitada.</p></div><div class='card'><h3>Decide con confianza</h3><p>Ofertas verificadas y reseñas para entrar donde vale la pena.</p></div>
+      </div>
+      <p class="small" style="margin-top:6px">Incentivo de registro: 20% de descuento en la ruta piloto y acceso temprano a nuevas temáticas.</p>
+    </section>
+
+    <section id="validacion" style="margin-top:14px">
+      <div class="section-title"><h2>Validación inicial</h2><span class="badge">Datos piloto</span></div>
+      <div class="grid3">
+        <div class='card stat'><span>📊</span><div><div class='small'>Ticket promedio de interés</div><b>≈ $12.700 COP por ruta</b></div></div><div class='card stat'><span>📊</span><div><div class='small'>Lo que más gustó</div><b>Narrativa AR y facilidad para ubicarse</b></div></div><div class='card stat'><span>📊</span><div><div class='small'>Qué mejorarían</div><b>Más rutas, idiomas y fotos históricas</b></div></div>
+      </div>
+      <p class="small" style="margin-top:6px"></p>
+    </section>
+
+    <section id="precios" style="margin-top:14px">
+      <div class="section-title"><h2>Precios de lanzamiento</h2><span class="badge">Piloto</span></div>
+      <div class="pricing">
+        <div class="card"><div class="badge">Ruta individual</div><h3 style="margin:8px 0">$10.000 – $20.000 COP por ruta</h3><p class="small">Incluye 8–10 hotspots con audio, texto y fotos históricas.</p><a class="btn primary" href="#registro">Reservar cupo</a></div>
+        <div class="card"><div class="badge">Parejas/Amigos</div><h3 style="margin:8px 0">-15% en 2–3 personas</h3><p class="small">Descuento automático en el piloto.</p><a class="btn" href="#registro">Quiero el descuento</a></div>
+        <div class="card"><div class="badge">Grupos</div><h3 style="margin:8px 0">Consulta precio especial</h3><p class="small">Ideal para hostales, colegios y empresas.</p><a class="btn" href="#registro">Solicitar cotización</a></div>
+      </div>
+    </section>
+
+    <section id="registro" style="margin-top:14px">
+      <div class="section-title"><h2>Reserva tu lugar</h2><span class="badge">CTA</span></div>
+      <form id="lead-form" class="card" onsubmit="return handleSubmit(event)" aria-label="Formulario de registro">
+        <input id="name" name="name" placeholder="Tu nombre" required />
+        <input id="email" name="email" type="email" placeholder="Tu email" required />
+        <select id="city" name="city"><option value="Armenia">Armenia</option><option value="Otra">Otra ciudad</option></select>
+        <details>
+          <summary>Encuesta rápida (opcional)</summary>
+          <input name="precio" placeholder="¿Cuánto pagarías por una ruta AR? (COP)" />
+          <input name="hoy" placeholder="¿Cómo resuelves hoy este problema?" />
+          <input name="gusta" placeholder="¿Qué es lo que más te gusta?" />
+          <input name="cambiar" placeholder="¿Qué cambiarías?" />
+        </details>
+        <button class="btn primary" type="submit">Probar ruta piloto con 20% OFF</button>
+        <button class="btn" type="button" onclick="shareLink()">Compartir esta página</button>
+        <p id="form-status" class="small" role="status"></p>
+      </form>
+      <p class="small" style="margin-top:6px">Al registrarte, recibes el 20% de descuento y acceso anticipado. No hacemos spam.</p>
+    </section>
+
+    <section id="faq" class="faq" style="margin-top:14px">
+      <div class="section-title"><h2>Preguntas frecuentes</h2></div>
+      <div class="grid3">
+        <details><summary>¿Necesito una app?</summary><p>No. Funciona desde el navegador del teléfono. Escaneas un QR o fachada y listo.</p></details><details><summary>¿Funciona sin datos todo el tiempo?</summary><p>Parte del contenido puede precargarse. Recomendamos conexión al inicio del recorrido.</p></details><details><summary>¿Cuánto cuesta la ruta piloto?</summary><p>Lanzamiento desde $10.000 COP por persona. Descuentos por grupo.</p></details><details><summary>¿En qué ciudades estará?</summary><p>Comenzamos en Armenia, Quindío. Próximamente más rutas temáticas.</p></details>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2026 TravelCompanion AR — MVP educativo (ACA). Hecho con ❤ en Quindío.</div>
+      <div class="small">Privacidad · Términos · Contacto</div>
+    </footer>
+  </div>
+
+  <script>
+    function handleSubmit(e){
+      e.preventDefault();
+      const status = document.getElementById('form-status');
+      status.textContent = 'Enviando…';
+      // DEMO: simula envío. Reemplaza con fetch() a tu backend, Formspree o Netlify Forms.
+      setTimeout(()=>{
+        status.textContent = '¡Gracias! Te enviaremos la ruta piloto y el descuento.';
+        e.target.reset();
+      }, 800);
+      return false;
+    }
+    function shareLink(){
+      const url = window.location.href; navigator.clipboard?.writeText(url);
+      const status = document.getElementById('form-status');
+      status.textContent = 'Enlace copiado. ¡Compártelo por WhatsApp o Instagram!';
+    }
+  </script>
+</body>
+</html>
